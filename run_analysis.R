@@ -1,4 +1,4 @@
-library(plyr)
+library(dplyr)
 
 # Check if in the correct dir
 if (!file.exists("UCI HAR Dataset")) stop('You must be in a dir that contains "UCI HAR Dataset"')
@@ -46,73 +46,8 @@ names(df)<-nms
 
 ## df contains the dataset as for the step 4
 
-dft=ddply(df,c("activity","subject"),summarize,
-  meanoftbodyaccmeanx=mean(tbodyaccmeanx),
-  meanoftbodyaccmeany=mean(tbodyaccmeany),
-  meanoftbodyaccmeanz=mean(tbodyaccmeanz),
-  meanoftbodyaccstdx=mean(tbodyaccstdx),
-  meanoftbodyaccstdy=mean(tbodyaccstdy),
-  meanoftbodyaccstdz=mean(tbodyaccstdz),
-  meanoftgravityaccmeanx=mean(tgravityaccmeanx),
-  meanoftgravityaccmeany=mean(tgravityaccmeany),
-  meanoftgravityaccmeanz=mean(tgravityaccmeanz),
-  meanoftgravityaccstdx=mean(tgravityaccstdx),
-  meanoftgravityaccstdy=mean(tgravityaccstdy),
-  meanoftgravityaccstdz=mean(tgravityaccstdz),
-  meanoftbodyaccjerkmeanx=mean(tbodyaccjerkmeanx),
-  meanoftbodyaccjerkmeany=mean(tbodyaccjerkmeany),
-  meanoftbodyaccjerkmeanz=mean(tbodyaccjerkmeanz),
-  meanoftbodyaccjerkstdx=mean(tbodyaccjerkstdx),
-  meanoftbodyaccjerkstdy=mean(tbodyaccjerkstdy),
-  meanoftbodyaccjerkstdz=mean(tbodyaccjerkstdz),
-  meanoftbodygyromeanx=mean(tbodygyromeanx),
-  meanoftbodygyromeany=mean(tbodygyromeany),
-  meanoftbodygyromeanz=mean(tbodygyromeanz),
-  meanoftbodygyrostdx=mean(tbodygyrostdx),
-  meanoftbodygyrostdy=mean(tbodygyrostdy),
-  meanoftbodygyrostdz=mean(tbodygyrostdz),
-  meanoftbodygyrojerkmeanx=mean(tbodygyrojerkmeanx),
-  meanoftbodygyrojerkmeany=mean(tbodygyrojerkmeany),
-  meanoftbodygyrojerkmeanz=mean(tbodygyrojerkmeanz),
-  meanoftbodygyrojerkstdx=mean(tbodygyrojerkstdx),
-  meanoftbodygyrojerkstdy=mean(tbodygyrojerkstdy),
-  meanoftbodygyrojerkstdz=mean(tbodygyrojerkstdz),
-  meanoftbodyaccmagmean=mean(tbodyaccmagmean),
-  meanoftbodyaccmagstd=mean(tbodyaccmagstd),
-  meanoftgravityaccmagmean=mean(tgravityaccmagmean),
-  meanoftgravityaccmagstd=mean(tgravityaccmagstd),
-  meanoftbodyaccjerkmagmean=mean(tbodyaccjerkmagmean),
-  meanoftbodyaccjerkmagstd=mean(tbodyaccjerkmagstd),
-  meanoftbodygyromagmean=mean(tbodygyromagmean),
-  meanoftbodygyromagstd=mean(tbodygyromagstd),
-  meanoftbodygyrojerkmagmean=mean(tbodygyrojerkmagmean),
-  meanoftbodygyrojerkmagstd=mean(tbodygyrojerkmagstd),
-  meanoffbodyaccmeanx=mean(fbodyaccmeanx),
-  meanoffbodyaccmeany=mean(fbodyaccmeany),
-  meanoffbodyaccmeanz=mean(fbodyaccmeanz),
-  meanoffbodyaccstdx=mean(fbodyaccstdx),
-  meanoffbodyaccstdy=mean(fbodyaccstdy),
-  meanoffbodyaccstdz=mean(fbodyaccstdz),
-  meanoffbodyaccjerkmeanx=mean(fbodyaccjerkmeanx),
-  meanoffbodyaccjerkmeany=mean(fbodyaccjerkmeany),
-  meanoffbodyaccjerkmeanz=mean(fbodyaccjerkmeanz),
-  meanoffbodyaccjerkstdx=mean(fbodyaccjerkstdx),
-  meanoffbodyaccjerkstdy=mean(fbodyaccjerkstdy),
-  meanoffbodyaccjerkstdz=mean(fbodyaccjerkstdz),
-  meanoffbodygyromeanx=mean(fbodygyromeanx),
-  meanoffbodygyromeany=mean(fbodygyromeany),
-  meanoffbodygyromeanz=mean(fbodygyromeanz),
-  meanoffbodygyrostdx=mean(fbodygyrostdx),
-  meanoffbodygyrostdy=mean(fbodygyrostdy),
-  meanoffbodygyrostdz=mean(fbodygyrostdz),
-  meanoffbodyaccmagmean=mean(fbodyaccmagmean),
-  meanoffbodyaccmagstd=mean(fbodyaccmagstd),
-  meanoffbodybodyaccjerkmagmean=mean(fbodybodyaccjerkmagmean),
-  meanoffbodybodyaccjerkmagstd=mean(fbodybodyaccjerkmagstd),
-  meanoffbodybodygyromagmean=mean(fbodybodygyromagmean),
-  meanoffbodybodygyromagstd=mean(fbodybodygyromagstd),
-  meanoffbodybodygyrojerkmagmean=mean(fbodybodygyrojerkmagmean),
-  meanoffbodybodygyrojerkmagstd=mean(fbodybodygyrojerkmagstd))
+df_by_activity_subject<-group_by(df,activity,subject)
+dft<-summarize_each(df_by_activity_subject,funs(mean),-trainortest,-activity,-subject)
 
 # Sort it to look better (Not needed. Data already sorted)
 # dft=dft[with(dft,order(activity,subject)),]

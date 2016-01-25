@@ -42,98 +42,98 @@ velocities in radians/second.
 Means and standard deviations of values from the accelerometer,
 after some signal filtering and gravity removed, along x, y or z.
 
-meantbodyaccmeanx
-meantbodyaccmeany
-meantbodyaccmeanz
+tbodyaccmeanx
+tbodyaccmeany
+tbodyaccmeanz
 
-meantbodyaccstdx
-meantbodyaccstdy
-meantbodyaccstdz
+tbodyaccstdx
+tbodyaccstdy
+tbodyaccstdz
 
 
 Means and standard deviations of values from the accelerometer,
 after some signal filtering, of gravity along x, y or z.
 
-meantgravityaccmeanx
-meantgravityaccmeany
-meantgravityaccmeanz
+tgravityaccmeanx
+tgravityaccmeany
+tgravityaccmeanz
 
-meantgravityaccstdx
-meantgravityaccstdy
-meantgravityaccstdz
+tgravityaccstdx
+tgravityaccstdy
+tgravityaccstdz
 
 
 Means and standard deviations of values from the accelerometer,
 after some signal filtering, of Jerk signals along x, y or z.
 
-meantbodyaccjerkmeanx
-meantbodyaccjerkmeany
-meantbodyaccjerkmeanz
+tbodyaccjerkmeanx
+tbodyaccjerkmeany
+tbodyaccjerkmeanz
 
-meantbodyaccjerkstdx
-meantbodyaccjerkstdy
-meantbodyaccjerkstdz
+tbodyaccjerkstdx
+tbodyaccjerkstdy
+tbodyaccjerkstdz
 
 
 Means and standard deviations of values from the gyroscope,
 after some signal filtering, along x, y or z.
 
-meantbodygyromeanx
-meantbodygyromeany
-meantbodygyromeanz
+tbodygyromeanx
+tbodygyromeany
+tbodygyromeanz
 
-meantbodygyrostdx
-meantbodygyrostdy
-meantbodygyrostdz
+tbodygyrostdx
+tbodygyrostdy
+tbodygyrostdz
 
 
 Means and standard deviations of values from the gyroscope,
 after some signal filtering, of Jerk signals along x, y or z.
 
-meantbodygyrojerkmeanx
-meantbodygyrojerkmeany
-meantbodygyrojerkmeanz
+tbodygyrojerkmeanx
+tbodygyrojerkmeany
+tbodygyrojerkmeanz
 
-meantbodygyrojerkstdx
-meantbodygyrojerkstdy
-meantbodygyrojerkstdz
+tbodygyrojerkstdx
+tbodygyrojerkstdy
+tbodygyrojerkstdz
 
 
 Means and standard deviations of the magnitude (norm)
 of the values from the accelerometer, after some signal filtering
 and gravity removed.
 
-meantbodyaccmagmean
-meantbodyaccmagstd
+tbodyaccmagmean
+tbodyaccmagstd
 
 
 Means and standard deviations of values from the accelerometer,
 after some signal filtering, of the magnitude (norm) of the gravity.
 
-meantgravityaccmagmean
-meantgravityaccmagstd
+tgravityaccmagmean
+tgravityaccmagstd
 
 Means and standard deviations of values from the accelerometer,
 after some signal filtering, of the magnitude (norm) of the
 Jerk signals.
 
-meantbodyaccjerkmagmean
-meantbodyaccjerkmagstd
+tbodyaccjerkmagmean
+tbodyaccjerkmagstd
 
 
 Means and standard deviations of the magnitude (norm)
 of the values from the gyroscope, after some signal filtering.
 
-meantbodygyromagmean
-meantbodygyromagstd
+tbodygyromagmean
+tbodygyromagstd
 
 
 Means and standard deviations of the magnitude (norm)
 of the values from the gyroscope, after some signal filtering,
 of Jerk signals.
 
-meantbodygyrojerkmagmean
-meantbodygyrojerkmagstd
+tbodygyrojerkmagmean
+tbodygyrojerkmagstd
 
 
 
@@ -142,67 +142,67 @@ meantbodygyrojerkmagstd
 Means and standard deviations of values from the accelerometer,
 after some signal filtering and gravity removed, along x, y or z.
 
-meanfbodyaccmeanx
-meanfbodyaccmeany
-meanfbodyaccmeanz
+fbodyaccmeanx
+fbodyaccmeany
+fbodyaccmeanz
 
-meanfbodyaccstdx
-meanfbodyaccstdy
-meanfbodyaccstdz
+fbodyaccstdx
+fbodyaccstdy
+fbodyaccstdz
 
 
 Means and standard deviations of values from the accelerometer,
 after some signal filtering, of Jerk signals along x, y or z.
 
-meanfbodyaccjerkmeanx
-meanfbodyaccjerkmeany
-meanfbodyaccjerkmeanz
+fbodyaccjerkmeanx
+fbodyaccjerkmeany
+fbodyaccjerkmeanz
 
-meanfbodyaccjerkstdx
-meanfbodyaccjerkstdy
-meanfbodyaccjerkstdz
+fbodyaccjerkstdx
+fbodyaccjerkstdy
+fbodyaccjerkstdz
 
 
 Means and standard deviations of values from the gyroscope,
 after some signal filtering, along x, y or z.
 
-meanfbodygyromeanx
-meanfbodygyromeany
-meanfbodygyromeanz
+fbodygyromeanx
+fbodygyromeany
+fbodygyromeanz
 
-meanfbodygyrostdx
-meanfbodygyrostdy
-meanfbodygyrostdz
+fbodygyrostdx
+fbodygyrostdy
+fbodygyrostdz
 
 Means and standard deviations of the magnitude (norm)
 of the values from the accelerometer, after some signal filtering
 and gravity removed.
 
-meanfbodyaccmagmean
-meanfbodyaccmagstd
+fbodyaccmagmean
+fbodyaccmagstd
 
 
 Means and standard deviations of values from the accelerometer,
 after some signal filtering, of the magnitude (norm) of the
 Jerk signals.
 
-meanfbodybodyaccjerkmagmean
-meanfbodybodyaccjerkmagstd
+fbodybodyaccjerkmagmean
+fbodybodyaccjerkmagstd
 
 
 Means and standard deviations of the magnitude (norm)
 of the values from the gyroscope, after some signal filtering.
 
-meanfbodybodygyromagmean
-meanfbodybodygyromagstd
+fbodybodygyromagmean
+fbodybodygyromagstd
 
 
 Means and standard deviations of the magnitude (norm)
 of the values from the gyroscope, after some signal filtering,
 of Jerk signals.
 
-meanfbodybodygyrojerkmagmean
-meanfbodybodygyrojerkmagstd
+fbodybodygyrojerkmagmean
+fbodybodygyrojerkmagstd
 
 
 For further details pls. see the original (source) documentation.
